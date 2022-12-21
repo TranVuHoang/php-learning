@@ -1,0 +1,15 @@
+/*====================== REGISTER ====================*/
+input {
+	display: block;
+	padding: 2px 5px;
+}
+.form-group {
+	margin: 5px 0;
+}
+p.error {
+	color: red;
+	font-size: 13px;
+}
+.success {
+	color: red;
+}

@@ -1,0 +1,36 @@
+<Files .htaccess>
+
+Order Allow,Deny
+
+Deny from all
+
+</Files>
+
+RewriteEngine On 
+# check link that hay gia --> điều kiện sử dụng Rewrite --> trước khi sử dụng đường dẫn ảo
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# định nghĩa trang home
+RewriteRule ^unitop.html$ index.php?
+
+# định nghĩa link page
+RewriteRule ^gioi-thieu$ index.php?mod=page&controller=index&action=index&id=1
+RewriteRule ^lien-he$ index.php?mod=page&controller=index&action=index&id=2
+
+# định nghĩa link product
+RewriteRule ^dien-thoai$ index.php?mod=product&controller=index&action=index&cat_id=1
+RewriteRule ^macbook$ index.php?mod=product&controller=index&action=index&cat_id=2
+RewriteRule ^laptop$ index.php?mod=product&controller=index&action=index&cat_id=3
+	#chi tiết product
+	RewriteRule ^dien-thoai/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=product&controller=index&action=detail&id=$2
+	RewriteRule ^macbook/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=product&controller=index&action=detail&id=$2
+	RewriteRule ^laptop/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=product&controller=index&action=detail&id=$2
+
+# Phan trang trong danh muc
+RewriteRule ^dien-thoai&page=([0-9]+)$ index.php?mod=product&controller=index&action=index&cat_id=1&page=$1
+RewriteRule ^macbook&page=([0-9]+)$ index.php?mod=product&controller=index&action=index&cat_id=2&page=$1
+
+# link giỏ hàng
+RewriteRule ^gio-hang$ index.php?mod=cart
+# thanh toan
+RewriteRule ^thanh-toan$ index.php?mod=cart&controller=index&action=pay

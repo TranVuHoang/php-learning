@@ -1,0 +1,19 @@
+.name-product{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+.product:hover{
+    box-shadow: 0 0 15px rgb(212, 209, 209);
+}
+@media screen and (max-width: 786px){
+    .post .post-thumb img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .content-post{
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}

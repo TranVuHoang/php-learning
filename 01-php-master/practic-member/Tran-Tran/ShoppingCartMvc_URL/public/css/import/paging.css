@@ -1,0 +1,33 @@
+
+/*//// paging ////*/
+#pagenavi-wp {
+	display: flex;
+	justify-content: center;
+}
+ul.paging {
+	float: right;
+}
+
+ul.paging li {
+	float: left;
+	margin: 0 3px;
+	border: 1px solid #333;
+	transition:  all 0.25s;
+}
+
+ul.paging li.active {
+	border: 1px solid red;	
+}
+ul.paging li.active a{
+	color: orange;
+}
+
+ul.paging li a {
+	padding: 6px;
+}
+ul.paging li:hover {
+	border: 1px solid red;
+}
+ul.paging li:hover a {
+	color: orange;
+}

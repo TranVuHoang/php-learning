@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper {
+  width: 960px;
+  margin: 0px auto;
+}
+#header,
+#footer {
+  padding: 30px 0px;
+  text-align: center;
+  background: blue;
+}
+#content {
+  padding: 20px;
+  text-align: center;
+  min-height: 600px;
+}

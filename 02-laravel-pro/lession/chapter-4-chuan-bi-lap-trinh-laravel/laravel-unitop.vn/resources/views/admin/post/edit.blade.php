@@ -1,0 +1,1 @@
+<p>Update bài viết với id = {{$id}}</p>
